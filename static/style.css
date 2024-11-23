@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Bootstrap的背景色 */
+    background-color: #f8f9fa; 
     padding: 20px;
 }
 
@@ -13,7 +13,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: #343a40; /* 深色文本 */
+    color: #343a40; 
 }
 
 textarea {
@@ -29,7 +29,7 @@ textarea {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff; /* Bootstrap主按钮颜色 */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -39,7 +39,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* 按钮悬停颜色 */
+    background-color: #0056b3;
 }
 
 #result {
@@ -49,5 +49,5 @@ button:hover {
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-    background-color: #e9ecef; /* Bootstrap的浅色背景 */
+    background-color: #e9ecef; 
 }
