@@ -4,24 +4,20 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import random
 import torch
 
-# 加载模型和tokenizer
-model_name = 'updated4_sentiment_model'  # 替换为模型的保存路径
+model_name = 'updated4_sentiment_model'  
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 
-# 初始化Flask应用
 app = Flask(__name__)
-CORS(app)  # 启用CORS
+CORS(app)  
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
     text = data.get('text', '')
 
-    # 预处理输入文本
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True, max_length=128)
     
-    # 模型预测
     with torch.no_grad():
         outputs = model(**inputs)
         logits = outputs.logits
@@ -129,7 +125,6 @@ def predict():
     
     judgment = random.choice(sentiment_judgment[predicted_class_id])
 
-    # 返回预测结果和市场判断
     return jsonify({
         'predicted_class': predicted_class_id,
         'market_judgment': judgment
