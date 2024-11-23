@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Bootstrap的背景色 */
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40; /* 深色文本 */
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Bootstrap主按钮颜色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* 按钮悬停颜色 */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #343a40;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef; /* Bootstrap的浅色背景 */
+}
